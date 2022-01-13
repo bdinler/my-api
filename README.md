@@ -16,7 +16,7 @@ Gereklilikler:
 
 ```sh
 git clone https://github.com/bdinler/my-api.git
-cd kobisi-challange
+cd my-api
 composer install
 // .env.example dosyasının adını .env olarak düzenleyiniz
 // .env dosyasını veritabanı ayarlarınıza göre değiştiriniz
