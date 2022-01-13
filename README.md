@@ -37,4 +37,6 @@ php artisan serve
 <a target="_blank" href="https://github.com/bdinler/my-api/tree/main/app/Http/Requests">[bkz]</a></p>
 <p><b>Seeder</b> yapısı kullanılarak User, Promotion Codes, Wallet datalar oluşturulmuştur. 
 <a target="_blank" href="https://github.com/bdinler/my-api/blob/main/database/seeders/DatabaseSeeder.php">[bkz]</a></p>
+<p><b>Postman</b> collection eklenmiştir. 
+<a target="_blank" href="https://github.com/bdinler/my-api/blob/main/monotech_api.postman_collection.json">[bkz]</a>
 
