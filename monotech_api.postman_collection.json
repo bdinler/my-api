@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "81c90b2f-8f46-43af-8113-568ab8f02fcd",
+		"name": "monotech api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@demo.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"bdinler\",\n    \"firstname\" : \"Bülent\",\n    \"lastname\" : \"Dinler\",\n    \"email\" : \"bulentdinler@gmail.com\",\n    \"password\" : \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Promotion Codes List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{admin_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "{{url}}api/backoffice/promotion-codes"
+			},
+			"response": []
+		},
+		{
+			"name": "Promotion Code Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{admin_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\": \"2021-12-30 18:30\",\n    \"end_date\": \"2022-12-30 18:30\",\n    \"amount\": 200,\n    \"quota\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/backoffice/promotion-codes"
+			},
+			"response": []
+		},
+		{
+			"name": "Promotion Code Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{admin_token}}"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\": \"2021-12-30 18:30\",\n    \"end_date\": \"2022-12-30 18:30\",\n    \"amount\": 100,\n    \"quota\": 15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/backoffice/promotion-codes/23"
+			},
+			"response": []
+		},
+		{
+			"name": "Promotion Code Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{admin_token}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "{{url}}api/backoffice/promotion-codes/35"
+			},
+			"response": []
+		},
+		{
+			"name": "Promotion Code Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{admin_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}api/backoffice/promotion-codes/26"
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Promotion Code",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{user_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\":\"Abgxj8wLsp\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/assign-promotion"
+			},
+			"response": []
+		}
+	]
+}
